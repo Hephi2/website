@@ -1,6 +1,6 @@
 {
-    "name": "recepies",
-    "short_name": "recepies",
+    "name": "testproject",
+    "short_name": "testproject",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

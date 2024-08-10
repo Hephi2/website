@@ -7,8 +7,8 @@ const RESOURCES = {"assets/AssetManifest.bin": "693635b5258fe5f1cda720cf224f158c
 "assets/AssetManifest.bin.json": "69a99f98c8b1fb8111c5fb961769fcd8",
 "assets/AssetManifest.json": "2efbb41d7877d10aac9d091f58ccd7b9",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
-"assets/fonts/MaterialIcons-Regular.otf": "9c9b8da8195a6eda31341a2d334b826a",
-"assets/NOTICES": "cf6c59a59f124667a8096517455bed2b",
+"assets/fonts/MaterialIcons-Regular.otf": "65e21b5db78a7c132bbb04776ec9c399",
+"assets/NOTICES": "d04822a72a3d5465360b305c187f199d",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "e986ebe42ef785b27164c36a9abc7818",
 "assets/shaders/ink_sparkle.frag": "4096b5150bac93c41cbc9b45276bd90f",
 "canvaskit/canvaskit.js": "eb8797020acdbdf96a12fb0405582c1b",
@@ -24,11 +24,11 @@ const RESOURCES = {"assets/AssetManifest.bin": "693635b5258fe5f1cda720cf224f158c
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "ef46586cb8a41396bebf0ca5102792e6",
-"/": "ef46586cb8a41396bebf0ca5102792e6",
-"main.dart.js": "30d2671cdf6216e6a447e5dbfa521a94",
-"manifest.json": "4860618c8afa0c8cbe200686d283cf36",
-"version.json": "85a8a947305f2ccf325c927fcf364006"};
+"index.html": "5442d2b786774ce0ec5aaf67c02728cc",
+"/": "5442d2b786774ce0ec5aaf67c02728cc",
+"main.dart.js": "0b36604414fb813e221ae02053dfdd8d",
+"manifest.json": "df0ef18e17389f3217e91ff0d0c60e14",
+"version.json": "b4e2b7da0afde38b4672740a58d6ae1b"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
