@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/recipes/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Rezepte-App - Deine persönliche Rezeptsammlung">
+  <meta name="description" content="Verwalte deine Rezepte, erstelle Einkaufslisten und teile kulinarische Kreationen mit deiner Gruppe. Optimiert für Web und Mobile.">
+  <meta name="keywords" content="rezepte, kochen, rezeptsammlung, einkaufsliste, kochbuch">
+  <meta name="author" content="HephisApps">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rezepte-App - Deine persönliche Rezeptsammlung">
+  <meta property="og:description" content="Verwalte deine Rezepte, erstelle Einkaufslisten und teile kulinarische Kreationen mit deiner Gruppe.">
+  <meta property="og:site_name" content="Rezepte-App">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Rezepte-App - Deine persönliche Rezeptsammlung">
+  <meta property="twitter:description" content="Verwalte deine Rezepte, erstelle Einkaufslisten und teile kulinarische Kreationen mit deiner Gruppe.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Rezepte">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <!-- App Title -->
+  <title>Rezepte-App</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
+    import { getStorage } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-storage.js";
+    import { } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js";
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDpwGxgxtJfjhpeTg5H8nFLxtmw2NHa4P0",
+      authDomain: "recipe-59f97.firebaseapp.com",
+      projectId: "recipe-59f97",
+      storageBucket: "recipe-59f97.appspot.com",
+      messagingSenderId: "973923702818",
+      appId: "1:973923702818:web:af09e9854d7a829d82d27b"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
+
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = "835469084" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */;
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
+</head>
+<body>
+  <script>
+  window.addEventListener('load', function(ev) {
+    // Download main.dart.js
+    _flutter.loader.loadEntrypoint({
+      serviceWorker: {
+        serviceWorkerVersion: serviceWorkerVersion,
+      },
+      onEntrypointLoaded: async function(engineInitializer) {
+        let appRunner = await engineInitializer.initializeEngine();
+        await appRunner.runApp();
+      }
+    });
+  });
+</script>
+</body>
+</html>
