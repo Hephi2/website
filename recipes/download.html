@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezepte App - Download</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 500px;
+            width: 100%;
+            padding: 40px;
+            animation: slideUp 0.5s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 40px;
+        }
+        
+        h1 {
+            color: #2d3748;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .version {
+            display: inline-block;
+            background: #edf2f7;
+            color: #4a5568;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .info {
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .info-title {
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-title::before {
+            content: "ℹ️";
+            margin-right: 8px;
+        }
+        
+        .info p {
+            color: #4a5568;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .download-btn {
+            display: block;
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 18px 30px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            margin: 20px 0;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        .download-btn:active {
+            transform: translateY(0);
+        }
+        
+        .download-icon {
+            margin-left: 8px;
+            font-size: 20px;
+        }
+        
+        .release-notes {
+            margin: 20px 0;
+        }
+        
+        .release-notes h3 {
+            color: #2d3748;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .release-notes ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .release-notes li {
+            padding: 8px 0;
+            padding-left: 25px;
+            color: #4a5568;
+            position: relative;
+            font-size: 14px;
+        }
+        
+        .release-notes li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #48bb78;
+            font-weight: bold;
+        }
+        
+        .instructions {
+            background: #fff5f5;
+            border-left: 4px solid #f56565;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .instructions-title {
+            font-weight: 600;
+            color: #c53030;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .instructions-title::before {
+            content: "⚠️";
+            margin-right: 8px;
+        }
+        
+        .instructions ol {
+            margin-left: 20px;
+            color: #4a5568;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .instructions li {
+            margin: 5px 0;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            color: #718096;
+            font-size: 14px;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            padding: 20px 0;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #718096;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="icon">🍳</div>
+            <h1>Rezepte App</h1>
+            <div class="version">Version <span id="version">1.0.0</span></div>
+        </div>
+        
+        <div class="info">
+            <div class="info-title">Neueste Version verfügbar</div>
+            <p>Lade die aktuelle Version der Rezepte App herunter und genieße alle neuen Features und Verbesserungen.</p>
+        </div>
+        
+        <a href="app-release.apk" class="download-btn" download>
+            Android App herunterladen
+            <span class="download-icon">⬇️</span>
+        </a>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value" id="fileSize">~25</div>
+                <div class="stat-label">MB</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="releaseDate">-</div>
+                <div class="stat-label">Veröffentlicht</div>
+            </div>
+        </div>
+        
+        <div class="release-notes">
+            <h3>Was ist neu?</h3>
+            <ul id="releaseNotesList">
+                <li>Verbesserte Performance und Stabilität</li>
+                <li>Bug-Fixes und Optimierungen</li>
+            </ul>
+        </div>
+        
+        <div class="instructions">
+            <div class="instructions-title">Installation</div>
+            <ol>
+                <li>Herunterladen der APK-Datei</li>
+                <li>In den Einstellungen "Installation aus unbekannten Quellen" erlauben</li>
+                <li>APK-Datei öffnen und installieren</li>
+                <li>App öffnen und genießen! 🎉</li>
+            </ol>
+        </div>
+        
+        <div class="footer">
+            Entwickelt mit ❤️ für Familie und Freunde
+        </div>
+    </div>
+    
+    <script>
+        // You can update these values when deploying a new version
+        const APP_VERSION = "1.0.0";
+        const RELEASE_DATE = "28.02.2026";
+        const FILE_SIZE_MB = 90;
+        const RELEASE_NOTES = [
+            "Automatische Update-Benachrichtigung hinzugefügt",
+            "Verbesserte Performance",
+            "Bug-Fixes"
+        ];
+        
+        // Update page content
+        document.getElementById('version').textContent = APP_VERSION;
+        document.getElementById('fileSize').textContent = `~${FILE_SIZE_MB}`;
+        document.getElementById('releaseDate').textContent = RELEASE_DATE;
+        
+        // Update release notes
+        const notesList = document.getElementById('releaseNotesList');
+        notesList.innerHTML = RELEASE_NOTES.map(note => `<li>${note}</li>`).join('');
+    </script>
+</body>
+</html>
+
