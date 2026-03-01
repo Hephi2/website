@@ -228,6 +228,16 @@
             color: #718096;
             margin-top: 5px;
         }
+        
+        .debug-info {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-size: 12px;
+            color: #856404;
+        }
     </style>
 </head>
 <body>
@@ -243,10 +253,12 @@
             <p>Lade die aktuelle Version der Rezepte App herunter und genieße alle neuen Features und Verbesserungen.</p>
         </div>
         
-        <a href="app-release.apk" class="download-btn" download>
+        <a href="https://github.com/Hephi3/recipes/releases/latest/download/app-release.apk" class="download-btn" id="downloadBtn">
             Android App herunterladen
             <span class="download-icon">⬇️</span>
         </a>
+        
+        <div class="debug-info" id="debugInfo" style="display: none;"></div>
         
         <div class="stats">
             <div class="stat">
@@ -301,6 +313,15 @@
         // Update release notes
         const notesList = document.getElementById('releaseNotesList');
         notesList.innerHTML = RELEASE_NOTES.map(note => `<li>${note}</li>`).join('');
+        
+        // Handle download button click
+        const downloadBtn = document.getElementById('downloadBtn');
+        const debugInfo = document.getElementById('debugInfo');
+        
+        downloadBtn.addEventListener('click', function(e) {
+            // GitHub releases handle downloads directly, no need to check
+            // Just let the link work naturally
+        });
     </script>
 </body>
 </html>
