@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    // GitHub Pages SPA redirect script
+    // Converts https://phempel.de/recipes/ABC123 to https://phempel.de/recipes/#/recipes/ABC123
+    (function() {
+      var baseSegments = window.location.pathname.split('/').filter(function(segment) {
+        return segment.length > 0;
+      });
+      
+      // Check if we're in the /recipes subdirectory
+      if (baseSegments.length > 0 && baseSegments[0] === 'recipes') {
+        // Remove 'recipes' from the beginning
+        baseSegments.shift();
+        
+        // If there are remaining segments, redirect to hash-based route
+        if (baseSegments.length > 0) {
+          var newPath = '/' + baseSegments.join('/');
+          var searchQuery = window.location.search || '';
+          window.location.replace(
+            window.location.origin + '/recipes/#' + newPath + searchQuery
+          );
+        } else {
+          // Just /recipes with nothing after - go to home
+          window.location.replace(window.location.origin + '/recipes/#/home');
+        }
+      } else {
+        // Not in recipes subdirectory, redirect to home
+        window.location.replace(window.location.origin + '/recipes/#/home');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
