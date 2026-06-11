@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>WheelOfNames</title>
+  <script>
+    (function () {
+      var path = window.location.pathname;
+      var search = window.location.search;
+
+      // Split path into segments
+      var segments = path.split('/').filter(Boolean);
+
+      // Expected:
+      // /wheelOfNames/<sessionId>
+      if (segments.length >= 2 && segments[0] === 'wheelOfNames') {
+        var sessionId = segments.slice(1).join('/');
+
+        // Redirect to Flutter app with correct base path
+        window.location.replace(
+          window.location.origin +
+          '/wheelOfNames/#/' +
+          sessionId +
+          search
+        );
+        return;
+      }
+
+      // If just /wheelOfNames or invalid route → go to app root
+      if (segments.length === 1 && segments[0] === 'wheelOfNames') {
+        window.location.replace(
+          window.location.origin +
+          '/wheelOfNames/#/'
+        );
+        return;
+      }
+
+      // Anything else → fallback to WheelOfNames home
+      window.location.replace(
+        window.location.origin +
+        '/wheelOfNames/#/'
+      );
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
