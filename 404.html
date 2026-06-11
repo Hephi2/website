@@ -3,26 +3,24 @@
 <head>
   <meta charset="utf-8">
   <title>Redirecting...</title>
-  <script>
+<script>
 (function () {
   var path = window.location.pathname;
   var search = window.location.search;
 
   var segments = path.split('/').filter(Boolean);
 
-  if (segments.length === 0) {
-    return;
-  }
+  if (segments.length === 0) return;
 
-  var app = segments[0];          // recipes OR wheelOfNames
+  var app = segments[0];
   var route = segments.slice(1).join('/');
 
-  // Build SPA redirect
+  // IMPORTANT: DO NOT use hash routing
+  // Send route as query param instead
   window.location.replace(
     window.location.origin +
     '/' + app +
-    '/#/' + route +
-    search
+    '/?route=' + encodeURIComponent(route)
   );
 })();
 </script>
