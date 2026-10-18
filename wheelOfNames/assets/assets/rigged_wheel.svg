@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#2D1B4E" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <path d="M60 5 L71 22 L49 22 Z" fill="#2D1B4E"/>
+  <g filter="url(#shadow)">
+    <circle cx="60" cy="65" r="48" fill="#ffffff"/>
+    <path d="M60 65 L60 19 A46 46 0 0 1 92.5 32.5 Z" fill="#F94144"/>
+    <path d="M60 65 L92.5 32.5 A46 46 0 0 1 106 65 Z" fill="#F3722C"/>
+    <path d="M60 65 L106 65 A46 46 0 0 1 92.5 97.5 Z" fill="#F9C74F"/>
+    <path d="M60 65 L92.5 97.5 A46 46 0 0 1 60 111 Z" fill="#90BE6D"/>
+    <path d="M60 65 L60 111 A46 46 0 0 1 27.5 97.5 Z" fill="#43AA8B"/>
+    <path d="M60 65 L27.5 97.5 A46 46 0 0 1 14 65 Z" fill="#277DA1"/>
+    <path d="M60 65 L14 65 A46 46 0 0 1 27.5 32.5 Z" fill="#577590"/>
+    <path d="M60 65 L27.5 32.5 A46 46 0 0 1 60 19 Z" fill="#A855F7"/>
+    <circle cx="60" cy="65" r="11" fill="#ffffff"/>
+    <circle cx="60" cy="65" r="5" fill="#2D1B4E"/>
+    <circle cx="60" cy="65" r="48" fill="none" stroke="#ffffff" stroke-width="4"/>
+  </g>
+</svg>
